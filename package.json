@@ -1,11 +1,12 @@
 {
   "name": "trustfwbd",
   "private": true,
-  "version": "1.1.1",
-  "description": "random.trustfwbd.com — Cloudflare Pages static + BD geo (Git deploy)",
+  "version": "1.1.2",
+  "description": "random.trustfwbd.com — Cloudflare Pages static + BD geo",
   "scripts": {
     "dev": "wrangler pages dev public",
-    "pages:deploy": "wrangler pages deploy public --project-name=trustfwbd"
+    "build": "echo \"Static site — output is public/\"",
+    "deploy": "wrangler pages deploy public --project-name=trustfwbd"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"

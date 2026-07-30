@@ -18,25 +18,23 @@ Bangladesh visitors are redirected away by a small Pages Function.
 
 ---
 
-## Fix build error: `npx wrangler deploy` / Missing entry-point
+## Dashboard build settings (Deploy command is required)
 
-Cloudflare Pages **Git** builds must **not** run `wrangler deploy` (that is for Workers).
+**Workers & Pages** → **trustfwbd** → **Settings** → **Builds & deployments**:
 
-In the dashboard: **Workers & Pages** → **trustfwbd** → **Settings** → **Builds & deployments** (or **Build configuration**):
-
-| Setting | Correct value |
-|--------|----------------|
+| Setting | Value |
+|--------|--------|
 | Framework preset | **None** |
-| Build command | **empty** (clear it) |
-| **Deploy command** | **empty** (delete `npx wrangler deploy`) |
+| Build command | `npm run build` |
+| **Deploy command** | `npm run deploy` |
 | Build output directory | `public` |
 | Root directory | `/` |
 
+`npm run deploy` runs **`wrangler pages deploy public`** (Pages), **not** `wrangler deploy` (Workers).
+
 Also set **Environment variable** (Production): `BD_REDIRECT_URL` = `https://t.ly/syJFH`
 
-Then **Retry deployment** (or push a new commit).
-
-Pages will publish `public/` and automatically include `functions/_middleware.js` for BD geo. No `wrangler deploy` step.
+Then **Retry deployment**.
 
 ---
 
