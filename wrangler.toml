@@ -1,14 +1,11 @@
-# Cloudflare Pages project (Git + dashboard build)
-# Dashboard:
+# Cloudflare Pages — static public/ + functions/
+# Git dashboard:
 #   Build command:  npm run build
-#   Deploy command: npm run deploy
+#   Deploy command: npx wrangler pages deploy public --project-name=trustfwbd
 #   Build output directory: public
-#
-# Do NOT use: npx wrangler deploy  (Workers only)
 
 name = "trustfwbd"
 compatibility_date = "2026-07-30"
-account_id = "b3ec9f1a6c610c48b11ac5423f571ee2"
 pages_build_output_dir = "public"
 
 [vars]

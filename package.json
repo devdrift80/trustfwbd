@@ -1,12 +1,12 @@
 {
   "name": "trustfwbd",
   "private": true,
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "random.trustfwbd.com — Cloudflare Pages static + BD geo",
   "scripts": {
     "dev": "wrangler pages dev public",
     "build": "node -e \"const fs=require('fs'); if(!fs.existsSync('public/index.html')) process.exit(1); console.log('OK public/index.html');\"",
-    "deploy": "node -e \"console.log('Pages Git publishes build output dir (public/). No wrangler deploy needed.');\""
+    "deploy": "wrangler pages deploy public --project-name=trustfwbd --commit-dirty=true"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
