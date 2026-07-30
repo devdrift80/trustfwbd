@@ -1,0 +1,11 @@
+# Cloudflare Pages project: random.trustfwbd.com
+# Static site in /public + geo middleware in /functions
+
+name = "trustfwbd"
+compatibility_date = "2026-07-30"
+account_id = "b3ec9f1a6c610c48b11ac5423f571ee2"
+pages_build_output_dir = "public"
+
+# Used by Pages Functions (also set the same in dashboard for Production).
+[vars]
+BD_REDIRECT_URL = "https://t.ly/syJFH"
