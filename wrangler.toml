@@ -1,11 +1,15 @@
-# Cloudflare Pages project: random.trustfwbd.com
-# Static site in /public + geo middleware in /functions
+# Cloudflare Pages (Git) — static site + Functions
+# Dashboard build settings (not wrangler deploy):
+#   Build command:          (empty)
+#   Deploy command:         (empty)  ← do NOT use "npx wrangler deploy"
+#   Build output directory: public
+#   Root directory:         /
 
 name = "trustfwbd"
 compatibility_date = "2026-07-30"
-account_id = "b3ec9f1a6c610c48b11ac5423f571ee2"
 pages_build_output_dir = "public"
 
-# Used by Pages Functions (also set the same in dashboard for Production).
+# Available to Pages Functions in local `wrangler pages dev`.
+# Also set the same key in: Pages → Settings → Environment variables → Production
 [vars]
 BD_REDIRECT_URL = "https://t.ly/syJFH"
