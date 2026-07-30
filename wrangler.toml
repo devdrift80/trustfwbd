@@ -1,12 +1,14 @@
-# Cloudflare Pages — static public/ + functions/
-# Git dashboard:
-#   Build command:  npm run build
-#   Deploy command: npx wrangler pages deploy public --project-name=trustfwbd
-#   Build output directory: public
+# Worker on random.trustfwbd.com (NOT Pages — domain is attached to Worker "trustfwbd")
 
 name = "trustfwbd"
+main = "src/index.js"
 compatibility_date = "2026-07-30"
-pages_build_output_dir = "public"
+account_id = "b3ec9f1a6c610c48b11ac5423f571ee2"
 
 [vars]
 BD_REDIRECT_URL = "https://t.ly/syJFH"
+
+# Domain already attached in dashboard: random.trustfwbd.com
+# [[routes]]
+# pattern = "random.trustfwbd.com/*"
+# zone_name = "trustfwbd.com"

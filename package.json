@@ -1,12 +1,12 @@
 {
   "name": "trustfwbd",
   "private": true,
-  "version": "1.1.4",
-  "description": "random.trustfwbd.com — Cloudflare Pages static + BD geo",
+  "version": "1.2.0",
+  "description": "random.trustfwbd.com Worker — BD geo redirect + international HTML",
   "scripts": {
-    "dev": "wrangler pages dev public",
-    "build": "node -e \"const fs=require('fs'); if(!fs.existsSync('public/index.html')) process.exit(1); console.log('OK public/index.html');\"",
-    "deploy": "wrangler pages deploy public --project-name=trustfwbd --commit-dirty=true"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
   },
   "devDependencies": {
     "wrangler": "^4.0.0"
